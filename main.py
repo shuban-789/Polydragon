@@ -1,4 +1,4 @@
-import math # math function required for pi exactness and trig functions
+import math # math module required for pi constant and trig functions
 
 # in the program, we have sl = sidelength, ap = apothem (center to side), rd = radius (center to vertex)
 def perimeter(sides, measure, option):
@@ -21,8 +21,8 @@ def area(sides, measure, option):
     area = ((sides * (measure**2))*(math.sin((2*math.pi)/sides)))/2 # calculate area from radius, using sine double angle formula to simplify sidelength*apothem
   return area
   
-sidenum = int(input("Enter number of sides > "))
+sidenum = int(input("Enter number of sides > ")) # input prompts
 opt = input("What will you be giving? (sl/ap/rd) > ")
 m = float(input("What is the length of that variable? > ")) # float to include possibly decimal inputs for lengths
-print("Perimeter: " + str(perimeter(sidenum, m, opt)))
-print("Area: " + str(area(sidenum, m, opt)))
+print("Perimeter: " + str(perimeter(sidenum, m, opt))) # apply perimeter function
+print("Area: " + str(area(sidenum, m, opt))) # apply area function
